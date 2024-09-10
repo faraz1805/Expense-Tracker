@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker with Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <!-- Expense Form -->
+        <div class="expense-form">
+            <input type="text" id="description" placeholder="Expense Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="House Rent">House Rent</option>
+                <option value="House Maintenance">House Maintenance</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Others">Others</option>
+            </select>
+            <input type="date" id="date" required>
+            <button id="add-expense-btn">Add Expense</button>
+        </div>
+
+        <!-- Expense List -->
+        <h2>Your Expenses</h2>
+        <ul id="expense-list"></ul>
+
+        <!-- Total Amount -->
+        <h3>Total: ₹<span id="total-amount">0.00</span></h3>
+
+        <!-- Expense Chart -->
+        <h2>Expense Distribution by Category</h2>
+        <canvas id="expenseChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
